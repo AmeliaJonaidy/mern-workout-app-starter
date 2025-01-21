@@ -12,7 +12,8 @@ const WorkoutDetails = ({ workout }) => {
     });
 
     const handleDelete = async () => {
-        const response = await fetch('api/workouts/' + workout._id, {
+        const response = await fetch(
+            `${process.env.REACT_APP_API_URI}/api/workouts/${workout._id}`, {
             method: 'DELETE',
         });
         const json = await response.json();
@@ -33,7 +34,8 @@ const WorkoutDetails = ({ workout }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('api/workouts/' + workout._id, {
+        const response = await fetch(
+            `${process.env.REACT_APP_API_URI}/api/workouts/${workout._id}`, {
             method: 'PATCH',
             body: JSON.stringify(updatedWorkout),
             headers: {
@@ -44,7 +46,7 @@ const WorkoutDetails = ({ workout }) => {
 
         if (response.ok) {
             dispatch({ type: 'UPDATE_WORKOUT', payload: json });
-            setIsEditing(false); // Hide the edit form
+            setIsEditing(false); 
         }
     };
 
