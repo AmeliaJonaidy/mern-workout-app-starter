@@ -78,7 +78,7 @@ const WorkoutDetails = ({ workout }) => {
                     <p><strong>Load (kg):</strong>{workout.load}</p>
                     <p><strong>Reps:</strong>{workout.reps}</p>
                     <p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
-                    <button onClick={handleEditClick}>Edit Workout✏️</button>
+                    <button onClick={handleEditClick}>Edit Workout ✏️</button>
                     <span onClick={handleDelete}>🗑️</span>
                 </>
             )}
