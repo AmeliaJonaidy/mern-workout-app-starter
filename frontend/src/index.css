@@ -56,10 +56,18 @@ header a {
   font-size: 0.9em;
   color: #555;
 }
+.workout-details button {
+  display: flex;
+  gap: 10px; 
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
 .workout-details span {
   position: absolute;
   top: 20px;
   right: 20px;
+  padding: 20px;
   cursor: pointer;
   background: #f1f1f1;
   padding: 6px;
@@ -67,7 +75,6 @@ header a {
   color: #333;
 }
 
-/* new workout form */
 label, input {
   display: block;
 }
@@ -97,3 +104,4 @@ div.error {
   border-radius: 4px;
   margin: 20px 0;
 }
+
